@@ -1,0 +1,241 @@
+{
+	"info": {
+		"_postman_id": "0f74a887-81ce-4a24-8b08-61af9ae0ec78",
+		"name": "task_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31902655"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"test\", \n    \"password\": \"test123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMzI1NTcwOCwianRpIjoiYjgzYzFhZjAtZjg1Ny00NWFiLTlhYTgtY2IwOGJiZTQ4YjM1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNzAzMjU1NzA4LCJjc3JmIjoiMjlkMzgyZTMtMTc5Yy00Y2I1LTliMTMtNjFkNDI1MDJiZmE3IiwiZXhwIjoxNzAzMjU2NjA4fQ.mFG_LzmZsku6SrPcmLWOLAogxVZDF65LCUOhEnK6GW0",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer_id\": 3,\n    \"purchase_date\": \"2023-10-10\",\n    \"listing_price\": \"100.0\",\n    \"sale_price\": \"80.0\",\n    \"discount_percentage\": \"20.0\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/purchase",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"purchase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_purchase",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMzI1NjY1NSwianRpIjoiNjRhZjllOTktM2QzOS00OTY2LTlmNDYtYWFkNTU2N2Q2ZmY0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNzAzMjU2NjU1LCJjc3JmIjoiNTI0NWE5NDYtOTZlYS00NDkyLTk1MjYtMTI3ODNkNTYxNGVjIiwiZXhwIjoxNzAzMjU3NTU1fQ.BFKvWDy4IdC8IVIebsSwYZyjooHcSzK33khaIb2lVV8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer_id\": 5,\n    \"purchase_date\": \"2023-10-10\",\n    \"listing_price\": \"100.0\",\n    \"sale_price\": \"80.0\",\n    \"discount_percentage\": \"20.0\"\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/purchase",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"purchase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "export_purchase",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMzI1NjY1NSwianRpIjoiNjRhZjllOTktM2QzOS00OTY2LTlmNDYtYWFkNTU2N2Q2ZmY0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNzAzMjU2NjU1LCJjc3JmIjoiNTI0NWE5NDYtOTZlYS00NDkyLTk1MjYtMTI3ODNkNTYxNGVjIiwiZXhwIjoxNzAzMjU3NTU1fQ.BFKvWDy4IdC8IVIebsSwYZyjooHcSzK33khaIb2lVV8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/export_purchase/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"export_purchase",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "protected_endpoint",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMzI1Nzk1OSwianRpIjoiODFjOGNkY2ItOTQ1OC00NDZjLThmYWUtZWRkZTRiMmI5N2VjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNzAzMjU3OTU5LCJjc3JmIjoiYzdkYWFhZjItNmI3Yi00OTU4LThjOTQtMWFmODc4ZTAzNzAxIiwiZXhwIjoxNzAzMjU4ODU5fQ.aaiX_Fg4gZpTYzBVbXmBs1CLLrWSO5d7HxEDkjacRt0",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/protected_endpoint",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"protected_endpoint"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMzI1NjY1NSwianRpIjoiNjRhZjllOTktM2QzOS00OTY2LTlmNDYtYWFkNTU2N2Q2ZmY0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNzAzMjU2NjU1LCJjc3JmIjoiNTI0NWE5NDYtOTZlYS00NDkyLTk1MjYtMTI3ODNkNTYxNGVjIiwiZXhwIjoxNzAzMjU3NTU1fQ.BFKvWDy4IdC8IVIebsSwYZyjooHcSzK33khaIb2lVV8",
+							"disabled": true
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "purchase_summary",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMzI1Nzk1OSwianRpIjoiODFjOGNkY2ItOTQ1OC00NDZjLThmYWUtZWRkZTRiMmI5N2VjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNzAzMjU3OTU5LCJjc3JmIjoiYzdkYWFhZjItNmI3Yi00OTU4LThjOTQtMWFmODc4ZTAzNzAxIiwiZXhwIjoxNzAzMjU4ODU5fQ.aaiX_Fg4gZpTYzBVbXmBs1CLLrWSO5d7HxEDkjacRt0",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/purchase_summary?beginning_date=2015-09-12&ending_date=2023-10-10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"purchase_summary"
+					],
+					"query": [
+						{
+							"key": "beginning_date",
+							"value": "2015-09-12"
+						},
+						{
+							"key": "ending_date",
+							"value": "2023-10-10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
