@@ -1,0 +1,120 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue;\f2\fnil\fcharset0 Monaco;
+}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red25\green25\blue25;\red212\green212\blue212;
+\red246\green246\blue239;\red140\green211\blue254;\red194\green126\blue101;\red167\green197\blue152;}
+{\*\expandedcolortbl;;\cssrgb\c100000\c100000\c100000;\cssrgb\c12941\c12941\c12941;\cssrgb\c86275\c86275\c86275;
+\cssrgb\c97255\c97255\c94902;\cssrgb\c61176\c86275\c99608;\cssrgb\c80784\c56863\c47059;\cssrgb\c70980\c80784\c65882;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Postman: \
+\
+1) login request\'92i ile ba\uc0\u351 l\u305 yorum. Access token\'92\u305 m\u305  kaydediyorum. // Authorization yapmama gerek yok. \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \cb3 \expnd0\expndtw0\kerning0
+http://localhost:5000/login\
+
+\f0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f2 \cf4 \cb3 \expnd0\expndtw0\kerning0
+\{\cf5 \cb1 \
+\cb3     \cf6 "username"\cf4 :\cf5  \cf7 "test"\cf4 ,\cf5  \cb1 \
+\cb3     \cf6 "password"\cf4 :\cf5  \cf7 "test123"\cf5 \cb1 \
+\cf4 \cb3 \}\cf5 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \
+\
+2) create_customer request\'92i i\'e7in headerslar\uc0\u305 m\u305  giriyorum: \
+\
+	Key: Authorization 			Value: Bearer + kaydetti\uc0\u287 im acces token\
+	Key: Content-Type			Value: application/json\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \cb3 \expnd0\expndtw0\kerning0
+http://localhost:5000/customer\
+
+\f0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f2 \cf4 \cb3 \expnd0\expndtw0\kerning0
+\{\cf5 \cb1 \
+\cb3     \cf6 "customer_id"\cf4 :\cf5  \cf8 6\cf4 ,\cf5 \cb1 \
+\cb3     \cf6 "success"\cf4 :\cf5  \cf7 true\cf5 \cb1 \
+\cf4 \cb3 \}\cf5 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \
+3) create_purchase request\'92i i\'e7in headerslar\uc0\u305 m\u305  giriyorum: \
+\
+	Key: Authorization 			Value: Bearer + kaydetti\uc0\u287 im acces token\
+	Key: Content-Type			Value: application/json\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \cb3 \expnd0\expndtw0\kerning0
+http://localhost:5000/purchase\
+
+\f0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f2 \cf4 \cb3 \expnd0\expndtw0\kerning0
+\{\cf5 \cb1 \
+\cb3     \cf6 "customer_id"\cf4 :\cf5  \cf8 6\cf4 ,\cf5 \cb1 \
+\cb3     \cf6 "purchase_date"\cf4 :\cf5  \cf7 "2023-10-10"\cf4 ,\cf5 \cb1 \
+\cb3     \cf6 "listing_price"\cf4 :\cf5  \cf7 "100.0"\cf4 ,\cf5 \cb1 \
+\cb3     \cf6 "sale_price"\cf4 :\cf5  \cf7 "80.0"\cf4 ,\cf5 \cb1 \
+\cb3     \cf6 "discount_percentage"\cf4 :\cf5  \cf7 "20.0"\cf5 \cb1 \
+\cf4 \cb3 \}\cf5  \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \
+4) export_purchase requesti i\'e7in headerslar\uc0\u305 m\u305  giriyorum: \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \cb3 \expnd0\expndtw0\kerning0
+http://localhost:5000/export_purchase/4   \'93buradaki 4 yaratt\uc0\u305 \u287 \u305 m purchase_id\'92dir. \'93
+\f0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 	Key: Authorization 			Value: Bearer + kaydetti\uc0\u287 im acces token\
+	Key: Content-Type			Value: application/json\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+5) protected_endpoint request\'92i i\'e7in headerslar\uc0\u305 m\u305  giriyorum: \
+\
+
+\f1 \cf2 \cb3 \expnd0\expndtw0\kerning0
+http://localhost:5000/protected_endpoint\
+
+\f0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 	Key: Authorization 			Value: Bearer + kaydetti\uc0\u287 im acces token\
+	Key: Content-Type			Value: application/json\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 6) purchase_summary request\'92i i\'e7in headerslar\uc0\u305 m\u305  giriyorum: \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 	Key: Authorization 			Value: Bearer + kaydetti\uc0\u287 im acces token\
+	Key: Content-Type			Value: application/json\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+
+\f1 \cf2 \cb3 \expnd0\expndtw0\kerning0
+http://localhost:5000/purchase_summary?beginning_date=2015-09-12&ending_date=2023-10-10\
+\
+
+\f0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+	\'93belirledi\uc0\u287 im parametreleri giriyorum\'94 : \
+\
+	Key: beginning_date		Value: 2015-09-12\
+	Key: ending_date 			Value: 2023-10-10 \
+\
+	\'93excel_document\'94: kar\uc0\u351 \u305 s\u305 ndaki de\u287 eri excel dosyas\u305  olarak a\'e7\u305 yorum. \
+}
